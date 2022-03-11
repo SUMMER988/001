@@ -23,6 +23,7 @@ public class Homework03 {
             if (animal instanceof Dog) {
                 ((Dog) animal).shout();
             }
+
         }
     }
 }
