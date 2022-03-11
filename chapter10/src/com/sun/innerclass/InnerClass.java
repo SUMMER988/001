@@ -10,6 +10,8 @@ public class InnerClass {
 
 class Outer {
     private int n1 = 100;
+    public Outer() {
+    }
     private void m2() {
         System.out.println("Outer m2()");
 
@@ -25,8 +27,5 @@ class Outer {
         Inner02 inner02 = new Inner02();
         inner02.f1();
 
-    }
-
-    public Outer() {
     }
 }

@@ -1,5 +1,10 @@
 package com.sun.enum_;
 
+enum Gender2 { //父类 Enum 的toString
+    BOY,
+    GIRL;
+}
+
 /**
  * ClassName: EnumExercise01
  * Description:
@@ -20,10 +25,5 @@ public class EnumExercise01 {
 //        }
         System.out.println(boy2 == boy);  //True
     }
-}
-
-enum Gender2 { //父类 Enum 的toString
-    BOY,
-    GIRL;
 }
 

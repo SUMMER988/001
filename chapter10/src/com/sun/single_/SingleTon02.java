@@ -10,8 +10,8 @@ public class SingleTon02 {
 }
 
 class Cat {
-    private String name;
     private static Cat cat;
+    private String name;
 
     private Cat(String name) {
         System.out.println("构造器被调用");

@@ -11,21 +11,21 @@ public class Enumeration02 {
 }
 
 class Season {
-    private final String name;
-    private final String desc;
     public final static int NUM0 = 100;
     public final static String NAME0 = "123";
     public final static String NAME1 = null;
+    public final static Season SPRING = new Season("春天", "温暖");
+    public final static Season SUMMER = new Season("夏天", "温暖");
+    public final static Season AUTUMN = new Season("秋天", "温暖");
+    public final static Season WINTER = new Season("冬天", "温暖");
     public static int NUM1 = 200;
 
     static {
         System.out.println("静态代码块被执行");
     }
 
-    public final static Season SPRING = new Season("春天", "温暖");
-    public final static Season SUMMER = new Season("夏天", "温暖");
-    public final static Season AUTUMN = new Season("秋天", "温暖");
-    public final static Season WINTER = new Season("冬天", "温暖");
+    private final String name;
+    private final String desc;
 
     //1. 将构造器私有化,目的防止 直接 new
     //2. 去掉setXxx方法, 防止属性被修改

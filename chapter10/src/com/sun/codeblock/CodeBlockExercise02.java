@@ -15,7 +15,6 @@ class Sample {
 }
 
 class Test {
-    Sample sam1 = new Sample("sam1成员初始化");
     static Sample sam = new Sample("静态成员sam初始化");
 
     static {
@@ -24,6 +23,8 @@ class Test {
             System.out.println("sam is null");
         }
     }
+
+    Sample sam1 = new Sample("sam1成员初始化");
 
     Test() {
         System.out.println("Test默认构造函数被调用");//

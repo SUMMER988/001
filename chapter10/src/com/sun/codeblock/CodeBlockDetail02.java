@@ -7,38 +7,35 @@ public class CodeBlockDetail02 {
 }
 
 class A {
-    private int n2 = getN2();
-
-    public int getN2() {
-        System.out.println("getN2()被调用");
-        return 200;
-    }
-
-    {
-        System.out.println("A 的普通代码块被调用");
-
-    }
+    private static int n1 = getN1();
 
     static {
         System.out.println("A 的静态代码块1被调用");
     }
 
-    private static int n1 = getN1();
+    private int n2 = getN2();
 
+    {
+        System.out.println("A 的普通代码块被调用");
+
+    }
     public static int getN1() {
         System.out.println("getN1()被调用");
         return 100;
+    }
+    public int getN2() {
+        System.out.println("getN2()被调用");
+        return 200;
     }
 
 }
 
 class B {
+    private static int n1 = setN1();
+
     static {
         System.out.println("B 的静态代码块1被调用");
     }
-
-    private static int n1 = setN1();
-
     public static int setN1() {
         System.out.println("getN1()被调用");
         return 100;

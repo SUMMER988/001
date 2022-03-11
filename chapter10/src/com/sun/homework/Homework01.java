@@ -20,17 +20,17 @@ public class Homework01 {
 }
 
 class Car {
-    double price = 10;
     static String color = "white";
-    public String toString() {
-        return price + "\t" + color;
-    }
+    double price = 10;
     public Car() {
         this.price = 9;
         color = "red";
     }
     public Car(double price) {
         this.price = price;
+    }
+    public String toString() {
+        return price + "\t" + color;
     }
 }
 

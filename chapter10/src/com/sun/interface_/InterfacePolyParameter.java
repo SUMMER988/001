@@ -1,5 +1,8 @@
 package com.sun.interface_;
 
+interface IF {
+}
+
 public class InterfacePolyParameter {
     public static void main(String[] args) {
         IF if01 = new Monster();
@@ -12,24 +15,26 @@ public class InterfacePolyParameter {
     }
 }
 
-interface IF {
-}
 class Monster implements IF {
     public void cry() {
         System.out.println("Monster is crying...");
     }
 }
+
 class Car implements IF {
     public void run() {
         System.out.println("Car is running...");
     }
 }
+
 class AAA {
 
 }
+
 class BBB extends AAA {
 
 }
+
 class CCC extends AAA {
 
 }

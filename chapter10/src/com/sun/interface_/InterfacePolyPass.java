@@ -1,5 +1,12 @@
 package com.sun.interface_;
 
+interface IH {
+    void say();
+}
+
+interface IG extends IH {
+}
+
 public class InterfacePolyPass {
     public static void main(String[] args) {
         //接口类型的变量可以指向，实现了该接口的类的对象实例
@@ -19,11 +26,7 @@ public class InterfacePolyPass {
     }
 
 }
-interface IH {
-    void say();
-}
-interface IG extends IH {
-}
+
 class Teacher implements IG {
     @Override
     public void say() {

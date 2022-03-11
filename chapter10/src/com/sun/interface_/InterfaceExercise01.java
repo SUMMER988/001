@@ -1,5 +1,9 @@
 package com.sun.interface_;
 
+interface A {
+    int a = 30;
+}
+
 public class InterfaceExercise01 {
     public static void main(String[] args) {
         B b = new B();
@@ -9,9 +13,6 @@ public class InterfaceExercise01 {
     }
 }
 
-interface A {
-    int a = 30;
-}
 class B implements A {
 
 }

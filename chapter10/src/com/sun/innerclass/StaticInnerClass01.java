@@ -23,10 +23,22 @@ public class StaticInnerClass01 {
 }
 
 class Outer10 { //外部类
-    private int n1 = 10;
     private static String name = "张三";
+    private int n1 = 10;
     private static void cry() {
     }
+    public static Inner10 getInner10_() {
+        return new Inner10();
+    }
+    public void m1() { //外部类---访问------>静态内部类 访问方式：创建对象，再访问
+        Inner10 inner10 = new Inner10();
+        inner10.say();
+    }
+
+    public Inner10 getInner10() {
+        return new Inner10();
+    }
+
     //Inner10就是静态内部类
     //1. 放在外部类的成员位置
     //2. 使用static 修饰
@@ -41,19 +53,6 @@ class Outer10 { //外部类
             System.out.println(name + " 外部类name= " + Outer10.name);
             cry();
         }
-    }
-
-    public void m1() { //外部类---访问------>静态内部类 访问方式：创建对象，再访问
-        Inner10 inner10 = new Inner10();
-        inner10.say();
-    }
-
-    public Inner10 getInner10() {
-        return new Inner10();
-    }
-
-    public static Inner10 getInner10_() {
-        return new Inner10();
     }
 }
 

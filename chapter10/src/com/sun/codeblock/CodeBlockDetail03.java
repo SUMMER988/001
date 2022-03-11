@@ -18,11 +18,11 @@ class AAA {
 }
 
 class BBB extends AAA {
-    public BBB() {
-        System.out.println("BBB() is called");
-    }
-
     {
         System.out.println("BBB的普通代码块被调用");
+    }
+
+    public BBB() {
+        System.out.println("BBB() is called");
     }
 }

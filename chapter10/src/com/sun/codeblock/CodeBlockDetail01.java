@@ -14,12 +14,13 @@ public class CodeBlockDetail01 {
 
 class DD {
     public static int n1 = 888;//静态属性
-    public int n2 = 999;
 
     //静态代码块
     static {
         System.out.println("DD的静态代码块1被执行");
     }
+
+    public int n2 = 999;
 
     //普通代码块,在new对象时,被调用,每创建一个对象,就调用一次
     //普通代码块是构造器的补充

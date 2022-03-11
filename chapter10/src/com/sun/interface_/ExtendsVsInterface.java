@@ -1,5 +1,14 @@
 package com.sun.interface_;
 
+//接口
+interface Fish {
+    void swimming();
+}
+
+interface Bird {
+    void fly();
+}
+
 public class ExtendsVsInterface {
     public static void main(String[] args) {
         LittleMonkey wuKong = new LittleMonkey("悟空");
@@ -27,13 +36,7 @@ class Monkey {
         return name;
     }
 }
-//接口
-interface Fish {
-    void swimming();
-}
-interface Bird {
-    void fly();
-}
+
 class LittleMonkey extends Monkey implements Fish, Bird {
 
     public LittleMonkey(String name) {

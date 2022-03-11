@@ -1,5 +1,9 @@
 package com.sun.innerclass;
 
+interface Bell { //接口
+    void ring();//方法
+}
+
 public class InnerClassExercise02 {
     public static void main(String[] args) {
         /*
@@ -39,10 +43,6 @@ public class InnerClassExercise02 {
             }
         });
     }
-}
-
-interface Bell { //接口
-    void ring();//方法
 }
 
 class CellPhone {//类

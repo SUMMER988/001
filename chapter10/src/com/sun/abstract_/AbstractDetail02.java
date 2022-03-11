@@ -26,16 +26,13 @@ class G extends E {
 
 //抽象类的本质还是类，所以可以有类的各种成员
 abstract class D {
-    public int n1 = 10;
     public static String name = "sun";
-
-    public void hi() {
-        System.out.println("hi");
-    }
-
-    public abstract void hello();
-
+    public int n1 = 10;
     public static void ok() {
         System.out.println("ok");
     }
+    public void hi() {
+        System.out.println("hi");
+    }
+    public abstract void hello();
 }

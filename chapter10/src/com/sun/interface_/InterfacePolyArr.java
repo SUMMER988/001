@@ -1,5 +1,9 @@
 package com.sun.interface_;
 
+interface Usb {
+    void work();
+}
+
 public class InterfacePolyArr {
     public static void main(String[] args) {
         //多态数组 -> 接口类型数组
@@ -24,9 +28,6 @@ public class InterfacePolyArr {
     }
 }
 
-interface Usb {
-    void work();
-}
 class Phone_ implements Usb {
     public void work() {
         System.out.println("The phone is working...");
@@ -35,6 +36,7 @@ class Phone_ implements Usb {
         System.out.println("The phone can be used for calling...");
     }
 }
+
 class Camera_ implements Usb {
     public void work() {
         System.out.println("The camera is working...");

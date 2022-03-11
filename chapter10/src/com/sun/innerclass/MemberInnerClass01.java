@@ -20,11 +20,22 @@ public class MemberInnerClass01 {
 }
 
 class Outer08 { //外部类
-    private int n1 = 10;
     public String name = "张三";
-
+    private int n1 = 10;
     private void hi() {
         System.out.println("hi()方法...");
+    }
+    //方法，返回一个Inner08实例
+    public Inner08 getInner08Instance() {
+        return new Inner08();
+    }
+    //写方法
+    public void t1() {
+        //使用成员内部类
+        //创建成员内部类的对象，然后使用相关的方法
+        Inner08 inner08 = new Inner08();
+        inner08.say();
+        System.out.println(inner08.sal);
     }
 
     //1.注意: 成员内部类，是定义在外部内的成员位置上
@@ -39,19 +50,6 @@ class Outer08 { //外部类
             System.out.println("n1 = " + n1 + " name = " + name + " 外部类的n1=" + Outer08.this.n1);
             hi();
         }
-    }
-    //方法，返回一个Inner08实例
-    public Inner08 getInner08Instance() {
-        return new Inner08();
-    }
-
-    //写方法
-    public void t1() {
-        //使用成员内部类
-        //创建成员内部类的对象，然后使用相关的方法
-        Inner08 inner08 = new Inner08();
-        inner08.say();
-        System.out.println(inner08.sal);
     }
 }
 

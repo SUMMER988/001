@@ -1,5 +1,10 @@
 package com.sun.innerclass;
 
+//接口
+interface IL {
+    void show();
+}
+
 public class InnerClassExercise01 {
     public static void main(String[] args) {
 
@@ -19,11 +24,6 @@ public class InnerClassExercise01 {
     public static void f1(IL il) {
         il.show();
     }
-}
-
-//接口
-interface IL {
-    void show();
 }
 
 //类->实现IL => 编程领域 (硬编码)

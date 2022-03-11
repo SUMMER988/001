@@ -12,10 +12,9 @@ public class SingleTon01 {
 }
 
 class GirlFriend {
-    private String name;
     public static int n1 = 100;
-
     private static GirlFriend girlFriend = new GirlFriend("RED");
+    private String name;
 
     private GirlFriend(String name) {
         System.out.println("构造器被调用");

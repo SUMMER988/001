@@ -17,12 +17,12 @@ class AA {
     public final double TAX_RATE2;
     public final double TAX_RATE3;
 
-    public AA() {
-        TAX_RATE2 = 1.1;
-    }
-
     {
         TAX_RATE3 = 1.2;
+    }
+
+    public AA() {
+        TAX_RATE2 = 1.1;
     }
 }
 

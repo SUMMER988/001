@@ -1,5 +1,10 @@
 package com.sun.interface_;
 
+interface IA {
+    void say();
+    void hi();
+}
+
 public class InterfaceDetail01 {
     public static void main(String[] args) {
         //new IA();
@@ -11,11 +16,6 @@ public class InterfaceDetail01 {
         ia.hi();
         ia.say();
     }
-}
-
-interface IA {
-    void say();
-    void hi();
 }
 
 class Cat implements IA {

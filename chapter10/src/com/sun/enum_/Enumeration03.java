@@ -1,15 +1,5 @@
 package com.sun.enum_;
 
-public class Enumeration03 {
-    public static void main(String[] args) {
-        System.out.println(Season2.SPRING);
-        System.out.println(Season2.SUMMER);
-        System.out.println(Season2.AUTUMN);
-        System.out.println(Season2.WINTER);
-
-    }
-}
-
 // 演示自定义枚举实现
 enum Season2 {
 
@@ -56,5 +46,15 @@ enum Season2 {
                 "name='" + name + '\'' +
                 ", desc='" + desc + '\'' +
                 '}';
+    }
+}
+
+public class Enumeration03 {
+    public static void main(String[] args) {
+        System.out.println(Season2.SPRING);
+        System.out.println(Season2.SUMMER);
+        System.out.println(Season2.AUTUMN);
+        System.out.println(Season2.WINTER);
+
     }
 }

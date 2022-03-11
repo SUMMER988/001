@@ -1,5 +1,9 @@
 package com.sun.innerclass;
 
+interface IA {
+    public void cry();
+}
+
 public class AnonymousInnerClass {
     public static void main(String[] args) {
         Outer04 outer04 = new Outer04();
@@ -76,10 +80,6 @@ class Outer04 {
         System.out.println("animal对象的运行类型为" + animal.getClass());
         animal.eat();
     }
-}
-
-interface IA {
-    public void cry();
 }
 
 // class Tiger implements IA {
