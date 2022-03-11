@@ -10,7 +10,7 @@ package com.sun.homework;
 interface ICalculate {
     // work方法 是完成计算，但是题没有具体要求，所以自己设计
     // 至于该方法完成怎样的计算，我们交给匿名内部类完成
-    public double work(double n1, double n2);
+    double work(double n1, double n2);
 }
 
 /**
@@ -57,6 +57,8 @@ class Cellphone {
     // 该匿名内部类，可以灵活的实现work,完成不同的计算任务
     public void testWork(ICalculate iCalculate, double n1, double n2) {
         double result = iCalculate.work(n1, n2);//动态绑定
+        System.out.println("计算后的结果是" + result);
+        System.out.println("计算后的结果是" + result);
         System.out.println("计算后的结果是" + result);
     }
 }
