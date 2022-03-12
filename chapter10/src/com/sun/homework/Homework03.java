@@ -21,6 +21,7 @@ public class Homework03 {
         for (Animal animal : animals) {
             animal.shout();
         }
+        System.out.println("for test.");
 
     }
 }
