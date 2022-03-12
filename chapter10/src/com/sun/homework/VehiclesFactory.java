@@ -10,8 +10,11 @@ package com.sun.homework;
  * @since JDK 1.8
  */
 public class VehiclesFactory {
+    private static final Horse horse = new Horse();
+    private VehiclesFactory() {
+    }
     public static Horse getHorse() {
-        return new Horse();
+        return horse;
     }
     public static Boat getBoat() {
         return new Boat();
