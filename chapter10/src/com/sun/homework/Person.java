@@ -17,13 +17,13 @@ public class Person {
         this.vehicles = vehicles;
     }
     public void passRiver() {
-        if (vehicles == null) {
+        if (!(vehicles instanceof Boat)) {
             vehicles = VehiclesFactory.getBoat();
         }
         vehicles.work();
     }
     public void common() {
-        if (vehicles == null) {
+        if (!(vehicles instanceof Horse)) {
             vehicles = VehiclesFactory.getHorse();
         }
         vehicles.work();

@@ -11,7 +11,7 @@ package com.sun.homework;
  */
 public class Homework06 {
     public static void main(String[] args) {
-        Person person = new Person("唐僧", VehiclesFactory.getBoat());
+        Person person = new Person("唐僧", VehiclesFactory.getHorse());
         person.common();
         person.passRiver();
 
