@@ -21,6 +21,7 @@ public class Homework03 {
         for (Animal animal : animals) {
             animal.shout();
         }
+
     }
 }
 
