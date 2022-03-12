@@ -24,17 +24,18 @@ public class Homework04 {
             他的编译类型 ICalculate, 他的运行类型就是 匿名内部类
          */
         cellphone.testWork(new ICalculate() {
+            @Override
             public double work(double n1, double n2) {
                 return n1 + n2;
             }
-        }, 9, 10);
+        }, 9, 10);//19.0
 
         cellphone.testWork(new ICalculate() {
             @Override
             public double work(double n1, double n2) {
                 return n1 * n2;
             }
-        }, 10, 8);//80.0
+        }, 9, 10);//90.0
 
     }
 }
