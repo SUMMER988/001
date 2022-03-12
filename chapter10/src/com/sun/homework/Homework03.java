@@ -12,6 +12,7 @@ package com.sun.homework;
 // @SuppressWarnings({"all"})
 public class Homework03 {
     public static void main(String[] args) {
+
         Animal[] animals = new Animal[3];
         animals[0] = new Cat();
         animals[1] = new Cat();
