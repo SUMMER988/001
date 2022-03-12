@@ -58,7 +58,6 @@ class Cellphone {
     public void testWork(ICalculate iCalculate, double n1, double n2) {
         double result = iCalculate.work(n1, n2);//动态绑定
         System.out.println("计算后的结果是" + result);
-        System.out.println("计算后的结果是" + result);
-        System.out.println("计算后的结果是" + result);
+        
     }
 }
