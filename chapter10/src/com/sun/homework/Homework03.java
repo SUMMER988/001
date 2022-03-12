@@ -16,14 +16,9 @@ public class Homework03 {
         animals[0] = new Cat();
         animals[1] = new Cat();
         animals[2] = new Dog();
-        for (Animal animal : animals) {
-            if (animal instanceof Cat) {
-                ((Cat) animal).shout();
-            }
-            if (animal instanceof Dog) {
-                ((Dog) animal).shout();
-            }
 
+        for (Animal animal : animals) {
+            animal.shout();
         }
     }
 }
