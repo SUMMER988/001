@@ -28,4 +28,10 @@ public class Person {
         }
         vehicles.work();
     }
+    public void passFireHill() {
+        if (!(vehicles instanceof Plane)) {
+            vehicles = VehiclesFactory.getPlane();
+        }
+        vehicles.work();
+    }
 }

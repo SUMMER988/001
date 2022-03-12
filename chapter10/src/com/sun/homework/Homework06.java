@@ -13,12 +13,10 @@ public class Homework06 {
     public static void main(String[] args) {
         Person person = new Person("唐僧", VehiclesFactory.getHorse());
         person.common();
+        person.passRiver();
+        person.passFireHill();
         person.common();
         person.passRiver();
-        person.common();
-        person.common();
-        person.passRiver();
-
+        person.passFireHill();
     }
 }
-

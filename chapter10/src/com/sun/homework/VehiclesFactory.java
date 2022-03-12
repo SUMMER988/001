@@ -19,4 +19,7 @@ public class VehiclesFactory {
     public static Boat getBoat() {
         return new Boat();
     }
+    public static Plane getPlane() {
+        return new Plane();
+    }
 }
