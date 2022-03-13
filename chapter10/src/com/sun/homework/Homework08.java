@@ -31,8 +31,8 @@ enum Color implements IColor {
     }
     @Override
     public void show() {
-        System.out.println(redValue + "\t" + greenValue
-                + "\t" + blueValue);
+        System.out.println(redValue + " " + greenValue
+                + " " + blueValue);
     }
 }
 
