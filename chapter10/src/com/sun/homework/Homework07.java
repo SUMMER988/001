@@ -12,12 +12,15 @@ package com.sun.homework;
 public class Homework07 {
     public static void main(String[] args) {
         //实例化不同的car对象
+        Car2 car0 = new Car2(-1);
+        car0.getAir().flow();
+        Car2 car1 = new Car2(20);
+        car1.getAir().flow();
         Car2 car2 = new Car2(60);
         car2.getAir().flow();
-        Car2 car21 = new Car2(-1);
-        car21.getAir().flow();
-        Car2 car22 = new Car2(20);
-        car22.getAir().flow();
+        new Car2(30).getAir().flow();
+        new Car2(40).getAir().flow();
+        new Car2(50).getAir().flow();
     }
 }
 
@@ -40,11 +43,11 @@ class Car2 {
     class Air {
         public void flow() {
             if (temperature > 40) {
-                System.out.println("温度大于40 空调吹冷气..");
+                System.out.println("当前温度为" + temperature + "，空调吹冷气..");
             } else if (temperature < 0) {
-                System.out.println("温度小于0 空调吹暖气..");
+                System.out.println("当前温度为" + temperature + "，空调吹暖气..");
             } else {
-                System.out.println("温度正常，关闭空调..");
+                System.out.println("当前温度为" + temperature + "，关闭空调..");
             }
         }
     }
