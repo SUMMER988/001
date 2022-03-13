@@ -10,4 +10,9 @@ package com.sun.exception_;
  * @since JDK 1.8
  */
 public class NullPointerException_ {
+    public static void main(String[] args) {
+
+        String name = null;
+        System.out.println(name.length());
+    }
 }
