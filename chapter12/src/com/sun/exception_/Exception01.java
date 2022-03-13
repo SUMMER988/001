@@ -12,5 +12,6 @@ package com.sun.exception_;
 public class Exception01 {
     public static void main(String[] args) {
         System.out.println("ok");
+        System.out.println("ok");
     }
 }
