@@ -1,4 +1,4 @@
-package com.sun.homework;
+package com.sun.homework.homework06;
 
 /**
  * ClassName: Boat
