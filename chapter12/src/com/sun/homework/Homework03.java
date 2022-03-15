@@ -17,7 +17,6 @@ public class Homework03 {
             System.out.println("B");
         }
     }
-
     public static void main(String[] args) {//main方法
         try {
             func();
@@ -27,5 +26,4 @@ public class Homework03 {
         }
         System.out.println("D");
     }
-
 }
