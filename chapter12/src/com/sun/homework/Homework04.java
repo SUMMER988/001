@@ -12,7 +12,7 @@ package com.sun.homework;
 public class Homework04 {
     public static void main(String[] args) {//main方法
         try {
-            showExce();
+            showException();
             System.out.println("A");
         } catch (Exception e) {
             System.out.println("B");
@@ -22,7 +22,7 @@ public class Homework04 {
         System.out.println("D");
     }
 
-    public static void showExce() throws Exception {
+    public static void showException() throws Exception {
         throw new Exception();
     }
 
