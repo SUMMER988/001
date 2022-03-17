@@ -9,10 +9,14 @@ package com.sun.stringbuffer_;
  * @version 1.0.0
  * @since JDK 1.8
  */
+@SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
         StringBuffer stringBuffer = new StringBuffer("hello");
         System.out.println(stringBuffer.capacity());
-        
+        StringBuffer stringBuffer01 = new StringBuffer(100);
+        System.out.println(stringBuffer01.capacity());
+        System.out.println(stringBuffer01.length());
+
     }
 }
