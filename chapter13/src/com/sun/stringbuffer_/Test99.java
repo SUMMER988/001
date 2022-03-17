@@ -1,5 +1,7 @@
 package com.sun.stringbuffer_;
 
+import java.util.Scanner;
+
 /**
  * ClassName: Test99
  * Description:
@@ -12,19 +14,32 @@ package com.sun.stringbuffer_;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
-        String str = null;
-        StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append(str);
-        System.out.println(stringBuffer);
-
-        try {
-            StringBuffer stringBuffer1 = new StringBuffer(str);
-            System.out.println(stringBuffer1);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            System.out.println("执行...");
+        Scanner scanner = new Scanner(System.in);
+        String price = null;
+        StringBuffer priceSb = new StringBuffer();
+        while (true) {
+            try {
+                System.out.println("请输入价格：");
+                price = scanner.next();
+                Double.parseDouble(price);
+                priceSb.append(price);
+                break;
+            } catch (Exception e) {
+                System.out.println("价格输入有误，请重新输入");
+                scanner.nextLine();
+            }
         }
-        System.out.println("继续执行...");
+        int index = priceSb.lastIndexOf(".");
+        if (index == -1) {
+            index = priceSb.length();
+        }
+        while (true) {
+            if (index < 4) {
+                break;
+            }
+            priceSb = priceSb.insert(index - 3, ',');
+            index = index - 3;
+        }
+        System.out.println(priceSb);
     }
 }
