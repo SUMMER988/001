@@ -1,6 +1,7 @@
 package com.sun.math_;
 
-import java.util.Random;
+import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * ClassName: Test99
@@ -14,21 +15,18 @@ import java.util.Random;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
-        double num1 = 0;
-        double num2 = 0;
-        Random random = new Random();
-        long startTime = System.currentTimeMillis();
-        int count = 0;
-        while (true) {
-            count++;
-            num1 = random.nextInt(100);
-            num2 = random.nextInt(100);
-            if (num1 == num2) {
-                System.out.println(num1 + "\t" + count);
-                break;
+        Integer[] integers = {1, 7, 5, 3, 9};
+        Arrays.sort(integers);
+        System.out.println("排序后");
+        System.out.println(Arrays.toString(integers));
+        Arrays.sort(integers, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                Integer i1 = (Integer) o1;
+                Integer i2 = (Integer) o2;
+                return i2 - i1;
             }
-        }
-        long endTime = System.currentTimeMillis();
-        System.out.println(endTime - startTime);
+        });
+        System.out.println(Arrays.toString(integers));
     }
 }
