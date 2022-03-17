@@ -34,8 +34,9 @@ public class StringMethod02 {
         // 1. 以 , 为标准对 poem 进行分割 , 返回一个数组
         // 2. 在对字符串进行分割时，如果有特殊字符，需要加入 转义符 \
         String[] split = poem.split(",");
-        poem = "E:\\aaa\\bbb";
-        split = poem.split("\\\\");
+        poem = "E:\taaa\tbbb";
+        System.out.println(poem);
+        split = poem.split("\t");
         System.out.println("==分割后内容===");
         for (int i = 0; i < split.length; i++) {
             System.out.println(split[i]);
