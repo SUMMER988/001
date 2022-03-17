@@ -14,32 +14,43 @@ import java.util.Scanner;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
+        /*
+        输入商品名称和商品价格，要求打印效果示例, 使用前面学习的方法完成：
+        商品名	商品价格
+        手机	123,564.59  //比如 价格 3,456,789.88
+
+        要求：价格的小数点前面每三位用逗号隔开, 在输出。
+
+        思路分析
+        1. 定义一个Scanner 对象，接收用户输入的 价格(String)
+        2. 希望使用到 StringBuffer的 insert ，需要将 String 转成 StringBuffer
+        3. 然后使用相关方法进行字符串的处理
+        代码实现
+
+         */
+
         Scanner scanner = new Scanner(System.in);
         String price = null;
-        StringBuffer priceSb = new StringBuffer();
+        StringBuffer sb = new StringBuffer();
         while (true) {
             try {
-                System.out.println("请输入价格：");
+                System.out.println("请输入商品价格");
                 price = scanner.next();
                 Double.parseDouble(price);
-                priceSb.append(price);
                 break;
-            } catch (Exception e) {
-                System.out.println("价格输入有误，请重新输入");
+            } catch (NumberFormatException e) {
+                System.out.println("输入有误，错误信息为" + e.getMessage());
+
                 scanner.nextLine();
             }
         }
-        int index = priceSb.lastIndexOf(".");
-        if (index == -1) {
-            index = priceSb.length();
+        sb.append(price);
+        int index = sb.lastIndexOf(".") == -1 ? sb.length() : sb.lastIndexOf(".");
+        while (index > 3) {
+            sb.insert(index -= 3, ",");
         }
-        while (true) {
-            if (index < 4) {
-                break;
-            }
-            priceSb = priceSb.insert(index - 3, ',');
-            index = index - 3;
-        }
-        System.out.println(priceSb);
+
+        System.out.println(sb);//8,123,564.59
+
     }
 }
