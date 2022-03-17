@@ -12,11 +12,16 @@ package com.sun.stringbuffer_;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
-        StringBuffer stringBuffer = new StringBuffer("hello");
-        System.out.println(stringBuffer.capacity());
-        StringBuffer stringBuffer01 = new StringBuffer(100);
-        System.out.println(stringBuffer01.capacity());
-        System.out.println(stringBuffer01.length());
+        String str = "YouAreWellcome";
+        StringBuffer stringBuffer = new StringBuffer(str);
+
+        StringBuffer stringBuffer1 = new StringBuffer();
+        stringBuffer1.append(str);
+
+        StringBuffer stringBuffer2 = new StringBuffer("sun");
+        String s = stringBuffer2.toString();
+        String s1 = new String(stringBuffer2);
+        System.out.println(s1);
 
     }
 }
