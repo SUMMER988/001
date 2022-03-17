@@ -1,5 +1,7 @@
 package com.sun.date_;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -13,8 +15,12 @@ import java.util.Date;
  */
 @SuppressWarnings({"all"})
 public class Test99 {
-    public static void main(String[] args) {
-        Date date = new Date(9234567);
-        System.out.println(date);
+    public static void main(String[] args) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 hh:mm:ss E");
+
+        String s = "1996年01月01日 10:20:30 星期一";
+        Date parse = sdf.parse(s);
+        System.out.println("parse = " + sdf.format(parse));
+
     }
 }
