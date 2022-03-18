@@ -12,6 +12,7 @@ package com.sun.math_;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
+        System.out.println();
 
     }
 }
