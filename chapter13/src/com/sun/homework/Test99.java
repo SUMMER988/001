@@ -41,6 +41,7 @@ public class Test99 {
         }
         String format = String.format("%s,%s.%c", names[2], names[0], names[1].toUpperCase().charAt(0));
         System.out.println(format);
+        System.out.println(format);
 
     }
 }
