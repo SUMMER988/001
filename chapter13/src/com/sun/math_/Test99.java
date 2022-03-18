@@ -1,6 +1,7 @@
 package com.sun.math_;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * ClassName: Test99
@@ -15,11 +16,30 @@ import java.util.Arrays;
 public class Test99 {
     public static void main(String[] args) {
 
-        String str = "ABCDEFG";
-        char[] chars = str.toCharArray();
-        Arrays.sort(chars, 0, 3);
-        System.out.println(Arrays.toString(chars));
+        Integer[] integer = {70, 20, 60};
+        Arrays.sort(integer);
+        System.out.println(Arrays.toString(integer));
 
+        Integer[] arr = {1, 7, 5, 0, 9};
+        System.out.println(Arrays.toString(arr));
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+        Arrays.sort(arr, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return -1;
+            }
+        });
+        System.out.println("======调用定制排序后======");
+        System.out.println(Arrays.toString(arr));
+        Arrays.sort(arr, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return -1;
+            }
+        });
+        System.out.println("======调用定制排序后======");
+        System.out.println(Arrays.toString(arr));
     }
 
 }
