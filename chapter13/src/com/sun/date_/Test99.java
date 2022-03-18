@@ -1,7 +1,8 @@
 package com.sun.date_;
 
 import java.text.ParseException;
-import java.util.Calendar;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * ClassName: Test99
@@ -15,13 +16,17 @@ import java.util.Calendar;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) throws ParseException {
-        Calendar c = Calendar.getInstance();
-        System.out.println(c.get(Calendar.YEAR));
-        System.out.println(c.get(Calendar.MONTH) + 1);
-        System.out.println(c.get(Calendar.DAY_OF_MONTH));
-        System.out.println(c.get(Calendar.HOUR));
-        System.out.println(c.get(Calendar.MINUTE));
-        System.out.println(c.get(Calendar.SECOND));
+        DateTimeFormatter dateTimeFormatter =
+                DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String s1 = dateTimeFormatter.format(now);
+        LocalDateTime localDateTime = now.plusDays(13);
+        String s2 = dateTimeFormatter.format(localDateTime);
+        System.out.println("现在是" + s1 + "\n13天后是" + s2);
+
+        LocalDateTime localDateTime1 = now.minusMinutes(3600);
+        System.out.println("3600分钟之前的日期是"
+                + dateTimeFormatter.format(localDateTime1));
 
     }
 }
