@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * ClassName: Homework02
- * Description:
+ * Description: 注册邮箱
  * date: 2022/3/19 1:22
  *
  * @author sun
@@ -14,32 +14,39 @@ import java.util.Scanner;
 @SuppressWarnings({"all"})
 public class Homework02 {
     public static void main(String[] args) {
-        init();
-    }
+        String[] strings = new String[3];
+        init(strings);
+        isRegister(strings);
 
-    public static void init() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("1");
-        String name = scanner.nextLine();
-        System.out.println("2");
-        String pwd = scanner.nextLine();
-        System.out.println("3");
-        String mail = scanner.nextLine();
+    }
+    public static void isRegister(String[] strings) {
         try {
-            userRegister(name, pwd, mail);
-            System.out.println("注册成功");
+            userRegister(strings[0], strings[1], strings[2]);
+            String format = String.format("注册成功,用户名为%s,邮箱为%s", strings[0], strings[2]);
+            System.out.println(format);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return;
         }
+
+    }
+
+    public static void init(String[] strings) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入用户名");
+        strings[0] = scanner.nextLine();
+        System.out.println("请输入密码");
+        strings[1] = scanner.nextLine();
+        System.out.println("请输入邮箱");
+        strings[2] = scanner.nextLine();
     }
 
     public static void userRegister(String name, String pwd, String mail) {
         if (name.length() < 2 || name.length() > 4) {
-            throw new RuntimeException("用户名长度有误");
+            throw new RuntimeException("用户名格式有误");
         }
         if (pwd.length() != 6 || !isDigital(pwd)) {
-            throw new RuntimeException("密码长度有误");
+            throw new RuntimeException("密码格式有误");
         }
         if (!(mail.contains("@") && mail.contains(".")
                 && mail.indexOf("@") < mail.indexOf("."))) {
