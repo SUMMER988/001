@@ -1,5 +1,7 @@
 package com.sun.math_;
 
+import java.util.Arrays;
+
 /**
  * ClassName: Test99
  * Description:
@@ -12,7 +14,12 @@ package com.sun.math_;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
-        System.out.println();
+
+        String str = "ABCDEFG";
+        char[] chars = str.toCharArray();
+        Arrays.sort(chars, 0, 3);
+        System.out.println(Arrays.toString(chars));
 
     }
+
 }
