@@ -62,6 +62,17 @@ public class ArraysMethod01 {
         //    将来的底层框架和源码的使用方式，会非常常见
         //Arrays.sort(arr); // 默认排序方法
         //定制排序
+        //反转
+        Arrays.sort(arr, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                Integer i1 = (Integer) o1;
+                Integer i2 = (Integer) o2;
+                return -1;
+            }
+        });
+        System.out.println("===反转排序后===");
+        System.out.println(Arrays.toString(arr));//
         Arrays.sort(arr, new Comparator() {
             @Override
             public int compare(Object o1, Object o2) {
@@ -80,7 +91,7 @@ public class ArraysMethod01 {
                 return -1;
             }
         });
-        System.out.println("===排序后===");
+        System.out.println("===反转排序后===");
         System.out.println(Arrays.toString(arr));//
         Arrays.sort(arr, new Comparator() {
             @Override
@@ -90,7 +101,7 @@ public class ArraysMethod01 {
                 return -1;
             }
         });
-        System.out.println("===排序后===");
+        System.out.println("===反转排序后===");
         System.out.println(Arrays.toString(arr));//
 
     }
