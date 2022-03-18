@@ -4,16 +4,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * ClassName: Test99
+ * ClassName: Date01
  * Description:
- * date: 2022/3/17 21:03
+ * date: 2022/3/19 0:02
  *
  * @author sun
  * @version 1.0.0
  * @since JDK 1.8
  */
 @SuppressWarnings({"all"})
-public class Test99 {
+public class Date01 {
     public static void main(String[] args) {
         Date date = new Date();
         System.out.println(date);
