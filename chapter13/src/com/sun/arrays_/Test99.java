@@ -1,7 +1,7 @@
 package com.sun.arrays_;
 
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.List;
 
 /**
  * ClassName: Test99
@@ -15,52 +15,25 @@ import java.util.Comparator;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
-        int[] arr = {1, -1, 8, 0, 28};
-        // bubble01(arr);
-        bubble02(arr, new Comparator() {
-            @Override
-            public int compare(Object o1, Object o2) {
-                return Integer.compare((Integer) o1, (Integer) o2);
-            }
-        });
+        Integer[] arr = {1, 3, 5, 7, 9};
+        int index = Arrays.binarySearch(arr, 5);
+        System.out.println("index = " + index);
 
-        System.out.println(Arrays.toString(arr));
+        Integer[] newArr = Arrays.copyOf(arr, arr.length);
+        // System.out.println(Arrays.toString(newArr));
 
-    }
-
-    public static void bubble01(int[] arr) {
-        int temp = 0;
-        for (int i = 0; i < arr.length - 1; i++) {
-            boolean flag = false;//标记是否发生交换
-            for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                    flag = true;
-                }
-            }
-            if (!flag) {
-                break;
-            }
+        Integer[] num = new Integer[]{9, 3, 2};
+        Arrays.fill(num, 99);
+        System.out.println(Arrays.toString(num));
+        Integer[] arr2 = {1, 3, 5, 7, 9};
+        boolean equals = Arrays.equals(arr, arr2);
+        System.out.println(equals);
+        List<Integer> asList = Arrays.asList(2, 3, 4, 5);
+        System.out.println("asList = " + asList);
+        Integer integer = new Integer(2);
+        asList.add(integer);
+        for (Integer value : asList) {
+            System.out.print(value);
         }
-    }
-    public static void bubble02(int[] arr, Comparator c) {
-        int temp = 0;
-        for (int i = 0; i < arr.length - 1; i++) {
-            boolean flag = false;//标记是否发生交换
-            for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (c.compare(arr[j], arr[j + 1]) > 0) {
-                    temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                    flag = true;
-                }
-            }
-            if (!flag) {
-                break;
-            }
-        }
-
     }
 }
