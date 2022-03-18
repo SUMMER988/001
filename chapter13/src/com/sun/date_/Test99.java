@@ -1,8 +1,7 @@
 package com.sun.date_;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Calendar;
 
 /**
  * ClassName: Test99
@@ -16,14 +15,13 @@ import java.util.Date;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) throws ParseException {
-        Date date = new Date();
-        System.out.println(date);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println(simpleDateFormat.format(date));
+        Calendar c = Calendar.getInstance();
+        System.out.println(c.get(Calendar.YEAR));
+        System.out.println(c.get(Calendar.MONTH) + 1);
+        System.out.println(c.get(Calendar.DAY_OF_MONTH));
+        System.out.println(c.get(Calendar.HOUR));
+        System.out.println(c.get(Calendar.MINUTE));
+        System.out.println(c.get(Calendar.SECOND));
 
-        String s = "1996-01-01 10:20:30";
-        Date parse = simpleDateFormat.parse(s);
-        System.out.println(parse);
-        System.out.println(simpleDateFormat.format(parse));
     }
 }
