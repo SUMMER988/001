@@ -72,6 +72,26 @@ public class ArraysMethod01 {
         });
         System.out.println("===排序后===");
         System.out.println(Arrays.toString(arr));//
+        Arrays.sort(arr, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                Integer i1 = (Integer) o1;
+                Integer i2 = (Integer) o2;
+                return -1;
+            }
+        });
+        System.out.println("===排序后===");
+        System.out.println(Arrays.toString(arr));//
+        Arrays.sort(arr, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                Integer i1 = (Integer) o1;
+                Integer i2 = (Integer) o2;
+                return -1;
+            }
+        });
+        System.out.println("===排序后===");
+        System.out.println(Arrays.toString(arr));//
 
     }
 }
