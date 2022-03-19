@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * ClassName: LocalDate_
- * Description:
+ * Description: 第三代日期类【LocalDate】【LocalTime】【LocalDateTime】
  * date: 2022/3/19 0:32
  *
  * @author sun
@@ -25,7 +25,7 @@ public class LocalDate_ {
 
         //2. 使用DateTimeFormatter 对象来进行格式化
         // 创建 DateTimeFormatter对象
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String format = dateTimeFormatter.format(ldt);
         System.out.println("格式化的日期=" + format);
 
@@ -48,6 +48,14 @@ public class LocalDate_ {
         //看看在 3456分钟前是什么时候，把 年月日-时分秒输出
         LocalDateTime localDateTime2 = ldt.minusMinutes(3456);
         System.out.println("3456分钟前 日期=" + dateTimeFormatter.format(localDateTime2));
+
+        LocalDate parse = LocalDate.parse("1996-05-16", dateTimeFormatter);
+        if (parse.isLeapYear()) {
+            System.out.println(parse.getYear() + " is leap year");
+
+        } else {
+            System.out.println(parse.getYear() + " is not leap year");
+        }
 
     }
 }
