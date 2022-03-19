@@ -1,5 +1,7 @@
 package com.sun.homework;
 
+import java.util.Scanner;
+
 /**
  * ClassName: Test99
  * Description:
@@ -12,6 +14,11 @@ package com.sun.homework;
 @SuppressWarnings({"all"})
 public class Test99 {
     public static void main(String[] args) {
-        
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        String[] strings = s.split("\\s+");
+        System.out.println(strings.length);
+        System.out.println(String.format("%s,%s.%c",
+                strings[2], strings[0], strings[1].toUpperCase().charAt(0)));
     }
 }
