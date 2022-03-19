@@ -4,8 +4,12 @@ import java.util.Calendar;
 
 /**
  * ClassName: Calendar_
- * Description:
- * date: 2022/3/19 0:18
+ * Description: 第二代日期类【Calendar】
+ * 【前两代日期类缺陷】
+ * 可变性：日期和时间这样的类对象应该是不可变的。Calendar类中可以使用三种方法更改日历字段：set()、add() 和 roll()。
+ * 偏移性：Date中的年份是从1900开始的，而月份都是从0开始的。
+ * 格式化：格式化只对Date有用，Calendar则不行。
+ * 此外，它们也不是线程安全的，不能处理闰秒等。
  *
  * @author sun
  * @version 1.0.0
