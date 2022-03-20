@@ -12,6 +12,7 @@ package com.sun.list_;
 @SuppressWarnings({"all"})
 public class ListMethod {
     public static void main(String[] args) {
-        
+
     }
 }
+
