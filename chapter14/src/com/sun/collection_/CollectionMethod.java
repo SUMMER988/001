@@ -5,8 +5,8 @@ import java.util.List;
 
 /**
  * ClassName: CollectionMethod
- * Description:
- * date: 2022/3/20 1:25
+ * Description: add,remove,contains,size,isEmpty,clear,addAll,containsAll,removeAll
+ * date: 2022/3/20 0:00
  *
  * @author sun
  * @version 1.0.0
