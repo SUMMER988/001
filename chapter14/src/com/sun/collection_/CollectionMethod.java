@@ -14,7 +14,6 @@ import java.util.List;
  */
 @SuppressWarnings({"all"})
 public class CollectionMethod {
-    @SuppressWarnings({"all"})
     public static void main(String[] args) {
         List list = new ArrayList();
         //        add:添加单个元素
