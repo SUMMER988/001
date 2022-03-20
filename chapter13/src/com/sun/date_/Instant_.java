@@ -1,5 +1,6 @@
 package com.sun.date_;
 
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
 
@@ -24,6 +25,9 @@ public class Instant_ {
         //3. 通过 date的toInstant() 可以把 date 转成Instant对象
         Instant instant = date.toInstant();
         System.out.println(instant);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(sdf.format(date));
 
     }
 }
