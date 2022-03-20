@@ -15,7 +15,6 @@ import java.util.Date;
 @SuppressWarnings({"all"})
 public class Instant_ {
     public static void main(String[] args) {
-
         //1.通过 静态方法 now() 获取表示当前时间戳的对象
         Instant now = Instant.now();
         System.out.println(now);
