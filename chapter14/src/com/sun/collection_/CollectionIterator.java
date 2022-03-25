@@ -15,7 +15,7 @@ import java.util.Iterator;
  */
 @SuppressWarnings({"all"})
 public class CollectionIterator {
-    @SuppressWarnings({"all"})
+    
     public static void main(String[] args) {
 
         Collection col = new ArrayList();
