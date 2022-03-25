@@ -2,7 +2,6 @@ package com.sun.collection_;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 /**
  * ClassName: Collection_
