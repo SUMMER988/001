@@ -14,7 +14,6 @@ import java.util.HashMap;
  */
 @SuppressWarnings({"all"})
 public class Collection_ {
-    @SuppressWarnings({"all"})
     public static void main(String[] args) {
         //老韩解读
         //1. 集合主要是两组(单列集合 , 双列集合)
