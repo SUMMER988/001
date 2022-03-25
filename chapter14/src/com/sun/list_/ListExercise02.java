@@ -94,6 +94,32 @@ public class ListExercise02 {
         }
 
     }
+
+    public static void sort2(List list) {
+        // int sortCount = 0;
+        int pos = 0;
+        int lastPos = list.size() - 1;
+        while (true) {
+            // sortCount++;
+            for (int i = 0; i < lastPos; i++) {
+                Book book = (Book) list.get(i);
+                Book book1 = (Book) list.get(i + 1);
+                if (book.getPrice() > book1.getPrice()) {
+                    list.set(i, book1);
+                    list.set(i + 1, book);
+                    pos = i;
+                }
+            }
+
+            if (lastPos == pos) {
+                // System.out.println(sortCount);
+                break;
+            }
+            lastPos = pos;
+        }
+
+    }
+
     public static void printList(List list) {
         System.out.println("====排序后====");
         for (Object book : list) {
