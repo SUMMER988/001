@@ -12,8 +12,6 @@ package com.sun.list_;
 @SuppressWarnings({"all"})
 public class LinkedList01 {
     public static void main(String[] args) {
-        //模拟一个简单的双向链表
-
         Node jack = new Node("jack");
         Node tom = new Node("tom");
         Node hsp = new Node("老韩");
