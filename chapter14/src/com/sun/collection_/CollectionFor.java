@@ -25,7 +25,7 @@ public class CollectionFor {
         // 1. 使用增强for, 在Collection集合
         // 2. 增强for， 底层仍然是迭代器
         // 3. 增强for可以理解成就是简化版本的 迭代器遍历
-        // 4. 快捷键方式 I
+        // 4. 快捷键方式 iter
         // for (Object book : col) {
         //    System.out.println("book=" + book);
         // }
