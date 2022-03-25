@@ -14,7 +14,6 @@ import java.util.Collection;
  */
 @SuppressWarnings({"all"})
 public class CollectionFor {
-    @SuppressWarnings({"all"})
     public static void main(String[] args) {
         Collection col = new ArrayList();
 
