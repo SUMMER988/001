@@ -52,8 +52,6 @@ public class SetMethod {
         for (Object o : set) {
             System.out.println("o=" + o);
         }
-
         //set 接口对象，不能通过索引来获取
-
     }
 }
