@@ -24,9 +24,11 @@ public class HashSet_ {
          2. HashSet 可以存放null ,但是只能有一个null,即元素不能重复
          */
         Set hashSet = new HashSet();
-        hashSet.add(null);
-        hashSet.add(null);
+        hashSet.add(1);
+        hashSet.add(2);
+        hashSet.add("AA");
+        System.out.println(hashSet.add(null));
+        System.out.println(hashSet.add(null));
         System.out.println("hashSet=" + hashSet);
-
     }
 }
