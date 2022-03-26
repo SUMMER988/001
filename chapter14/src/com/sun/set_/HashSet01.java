@@ -50,7 +50,7 @@ public class HashSet01 {
 }
 
 class Dog { //定义了Dog类
-    private String name;
+    private final String name;
 
     public Dog(String name) {
         this.name = name;
