@@ -18,6 +18,8 @@ public class HashSetExercise02 {
         employee0s.add(new Employee0("A", 1234, "99", "03", "16"));
         employee0s.add(new Employee0("A", 1234, "99", "03", "16"));
         employee0s.add(new Employee0("A", 1234, "99", "03", "11"));
+        employee0s.add(new Employee0("A", 1234, "99", "03", "11"));
+        employee0s.add(new Employee0("A", 1234, "99", "03", "13"));
         System.out.println(employee0s.size());
         for (Employee0 employee0 : employee0s) {
             System.out.println(employee0);
@@ -52,9 +54,7 @@ class Employee0 {
     public int hashCode() {
         int res = 17;
         res = res * 31 + name.hashCode();
-        res = res * 31 + birthday.year.hashCode();
-        res = res * 31 + birthday.month.hashCode();
-        res = res * 31 + birthday.day.hashCode();
+        res = res * 31 + birthday.hashCode();
         return res;
     }
     @Override
@@ -100,10 +100,8 @@ class Employee0 {
             if (obj == null || getClass() != obj.getClass()) {
                 return false;
             }
-            MyDate myDate = (MyDate) obj;
-            String s = year + month + day;
-            String myDateS = myDate.year + myDate.month + myDate.day;
-            return s.equals(myDateS);
+            MyDate obj1 = (MyDate) obj;
+            return (year + month + day).equals(obj1.year + obj1.month + obj1.day);
         }
         @Override
         public String toString() {
@@ -112,6 +110,15 @@ class Employee0 {
                     ", month='" + month + '\'' +
                     ", day='" + day + '\'' +
                     '}';
+        }
+        @Override
+        public int hashCode() {
+            int res = 17;
+            res = res * 31 + year.hashCode();
+            res = res * 31 + month.hashCode();
+            res = res * 31 + day.hashCode();
+            return res;
+
         }
     }
     public Employee0(String name, double sal, String year, String month, String day) {
